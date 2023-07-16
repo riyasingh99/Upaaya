@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upayaa</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="./css/whyy.css">
+
+
+
+    <style>
+        button {
+            --width: 150px;
+            --timing: 2s;
+            border: 0;
+            width: var(--width);
+            padding-block: 1em;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            background: rgb(64, 192, 87);
+            transition: all 0.2s;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+            animation: var(--timing) linear dance6123 infinite;
+            transform: scale(1.1) translateY(-1px);
+        }
+
+        @keyframes dance6123 {
+            to {
+                background-position: var(--width);
+            }
+        }
+    </style>
+    <style type='text/css'>
+        iframe.goog-te-banner-frame{ display: none !important;}
+        </style>
+        
+        <style type='text/css'>
+        body {position: static !important; top:0px !important;}
+        </style>
+        
+        <style type='text/css'>
+        .goog-logo-link {display:none !important;} 
+        .goog-te-gadget{color: transparent !important;}
+        </style>
+    
+
+</head>
+<body>
+
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav" >
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Upaaya</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="cards.html">About-Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="whyy.html">Why</a>
+                     </li>
+                    <li class="nav-link">
+                        <a href="#">Forms</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.facebook.com/insight.iitbombay/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/insight.iitb/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/insightiitb?lang=en"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCOrygxhb6povqsNt_EVbDzg"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .translated-nav {
+            margin-top: 200px; /* Adjust the value as per your requirement */
+        }
+    </style>
+    
+    <script>
+        function translatePage() {
+            // Get the navbar element
+            var navbar = document.getElementById("navbar");
+    
+            // Add the 'translated-nav' class to push it down
+            navbar.classList.add("translated-nav");
+        }
+    </script>
+
+    <script>
+        function toggleDropdown(event) {
+          event.preventDefault();
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+        }
+      
+        window.addEventListener("click", function(event) {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          var dropdownToggle = document.querySelector(".dropdown-toggle");
+          if (!event.target.matches(".dropdown-toggle") && !event.target.matches(".dropdown-menu")) {
+            dropdownMenu.style.display = "none";
+          }
+        });
+      </script>
+
+      <style>
+        #google_translate_element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index:999;
+        }
+    </style>
+
+    <div id="google_translate_element" style="background-color: #ffc305; padding:10px 10px; border-radius:1rem;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+
+         function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,bn,te,mr,ta,ur,gu,kn,ml,pa,as,or,ks,ne,sd,si,en,es,fr,de,ja,ko,zh-CN',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
+
+    // Event listener to detect translation
+    google.translate.TranslateElement.setOnTranslateCallback(translatePage);
+}
+
+
+    </script>
+
+    <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+<br><br><br><br>
+
+    <section id="MainContent">
+        <h1 style="text-align: center;">Why Choose Upayaa?</h1>
+        <p style="text-align: center; margin-left:200px; margin-right:200px;" >At Upayaa, we are on a mission to revolutionize the healthcare industry by harnessing the power of technology. We understand the challenges individuals face when navigating both mental and physical health symptoms. That's why we have developed innovative solutions to address these challenges head-on. Our team of dedicated professionals is committed to delivering high-quality care and support, guiding you every step of the way on your health journey.
+            We prioritize data privacy and security, ensuring that your personal health information is protected and confidential. Here's why you should choose Upayaa for your healthcare needs:</p>
+    </section>
+
+<br><br>
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="circle"><span class="homebox" style="display: flex; justify-content: center; align-items: center;">
+                                    <i class="fas fa-user-md" style="color: #ffc305;"></i> 
+                                 </span></div>
+                                <div class="content">
+                                    <span class="year">Comprehensive Health Solutions</span>
+                                    <h3 class="title h4">"Unlock the Path to Wellness: Embrace Upayaa's Integrated Approach to Total Health"</h3>
+                                    <p class="description">
+                                        We believe that true healthcare goes beyond just treating physical ailments. Our holistic approach encompasses both mental and physical well-being. With Upayaa, you can access a range of comprehensive health solutions that address the complexities of navigating symptoms related to both mental and physical health. We provide personalized tools and resources to help you understand, manage, and overcome these challenges.
+
+                                    </p>
+                                    <div class="icon"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="circle"><span class="homebox"  style="display: flex; justify-content: center; align-items: center;"><i class="fas fa-heartbeat" style="color: #ffc305;"></i></span></div>
+                                <div class="content">
+                                    <span class="year">Empowering Mental Health Support</span>
+                                    <h3 class="title h4">"Discover Mental Harmony, Discover Upayaa: Empowering Your Mental Health Journey"</h3>
+                                    <p class="description">
+                                        We recognize the importance of mental health in overall well-being. At Upayaa, we offer specialized mental health solutions to help you navigate and address mental health symptoms. Our platform provides access to resources, self-assessment tools, and professional guidance to support your mental well-being journey. By empowering you with knowledge and tools, we strive to enhance your mental resilience and improve your overall quality of life.
+                                    </p>
+                                    <div class="icon"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="circle"><span class="homebox" style="display: flex; justify-content: center; align-items: center;">
+                                    <i class="fas fa-stethoscope" style="color: #ffc305;"></i></span></div>
+                                <div class="content">
+                                    <span class="year">User-Friendly Technology</span>
+                                    <h3 class="title h4">User-Friendly Technology</h3>
+                                    <p class="description">
+                                        We understand that technology should be accessible and easy to use. That's why we have designed our platform with a user-friendly interface, making it simple and intuitive for anyone to navigate. Our solutions are built to be inclusive and cater to individuals of all technological backgrounds. With Upayaa, you can effortlessly access our tools and resources, empowering you to take control of your health journey with confidence.
+
+                                    </p>
+                                    <div class="icon"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="circle"><span class="homebox" style="display: flex; justify-content: center; align-items: center;">
+                                    <i class="fas fa-diagnoses" style="color: #ffc305;"></i></span></div>  
+                                <div class="content">
+                                    <span class="year">Personalized Symptom Management</span>
+                                    <h3 class="title h4">Personalized Symptom Management</h3>
+                                    <p class="description">
+                                        We know that everyone's healthcare journey is unique. That's why we offer personalized symptom management solutions tailored to your specific needs. Our platform allows you to track, monitor, and manage your symptoms effectively. Through data-driven insights, you can gain a deeper understanding of your health patterns and make informed decisions about your well-being.
+
+                                    </p>
+                                    <div class="icon"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="timeline">
+                            <div class="timeline-content">
+                                <div class="circle"><span class="homebox" style="display: flex; justify-content: center; align-items: center;">
+                                    <i class="fas fa-procedures" style="color: #ffc305;"></i>
+                                </span></div>
+                                <div class="content">
+                                    <span class="year">Expert Guidance and Support</span>
+                                    <h3 class="title 4">Expert Guidance and Support</h3>
+                                    <p class="description">
+                                        At Upayaa, we believe in the power of human connection. We provide access to a network of healthcare professionals, including digital and mental health navigators, who are qualified to guide and support you throughout your health journey. Our team is dedicated to delivering personalized care and ensuring that you receive the guidance you need to navigate your symptoms and find effective solutions.
+                                    </p>
+                                    <div class="icon"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div style="display: flex; justify-content: center;">
+            <h1 style="margin-bottom: 2px;">Our Activities</h1>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <h3 style="margin-top: 2px;">Application of AI based screening and triaging in rural India</h3>
+        </div>
+          <br><br>
+
+          <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 20px; margin-bottom: 40px;">
+            <div style="flex: 60%;">
+                <h2>Asansol, West Bengal</h2>
+                <p>STUDY OBJECTIVES:
+                    The objective of this study is to use the AI-based symptom checker, Knidian in a rural area with the following objectives:<br>
+                    a) To collect the user experience and interface feedback on the application’s ease of use. <br>
+                    b) To assess the accuracy of the application in correctly diagnosing the patients.<br>
+                    c) To explore how AI can help people understand the symptoms before they reach the healthcare facility.<br> 
+                    d) To determine the mental health awareness among the people and inform them about TeleMANAS
+                </p>
+                <div>
+                    <a href="wbdoc.html" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Read More
+                    </a>
+                </div>
+            </div>
+            <div style="flex: 40%; padding-left: 20px;">
+                <img src="assets/WB2.png" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+
+            </div>
+        </div>
+        
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 20px; margin-top: 40px;">
+            <div style="flex: 40%; padding-right: 20px;">
+                <img src="assets/Amr.png" alt="Image 1" style="width: 110%; height: 100%; max-height: 700px; object-fit: cover; border-radius: 0px;">
+            </div>
+            <br><br><br><br><br><br>
+            <div style="flex: 10%;"></div>
+            <div style="flex: 50%;">
+                <h2> Amravati, Maharashtra </h2>
+                <p>A study conducted collected information from individuals of different ages and genders in the Mahuli Chor area. The study aimed to assess various health-related factors such as blood pressure, weight, height, waist circumference, and the presence of heart disease, hypertension, stroke, diabetes, or cancer in their families.<br>The participants' awareness of the Telemanas Mental Health Helpline was also recorded, along with their responses to mental health screening tools such as the PHQ-2 questionnaire. </p>
+                <div>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vSNeLer0TfGEQGsXhStdURETe9tmfB7Y068UZxM49tVFMc7hQYaK2Ic9ewMkx2jaA/pub" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Read More
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        
+          
+      
+
+        <!-- --------------------------- Footer ---------------------------------------- -->
+        <hr style="width: 1400px; border: none; height: 3px; background-color: #b2b1b1;">
+        <footer class="footer">
+            <div class="container">
+                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                    <h2>Upaaya</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                        iure, autem nulla tenetur repellendus.</p>
+                </div>
+                <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                    <h2>Newsletter</h2>
+                    <p>Stay update with our latest</p>
+                    <div class="form-element">
+                        <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </div>
+                <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Blogs</h2>
+                    <h4 style="color:#141212">Home</h4>
+                    <h4>About-Us</h4>
+                    <h4>Pricing</h4>
+                    <h4>Contact-Us</h4>
+                    <!-- <div class="flex-row">
+                        <img src="./assets/instagram/thumb-card3.png" alt="insta1">
+                        <img src="./assets/instagram/thumb-card4.png" alt="insta2">
+                        <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                    </div>
+                    <div class="flex-row">
+                        <img src="./assets/instagram/thumb-card6.png" alt="insta4">
+                        <img src="./assets/instagram/thumb-card7.png" alt="insta5">
+                        <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                    </div> -->
+                </div>
+                <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Follow us</h2>
+                    <p>Let us be Social</p>
+                    <div>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="rights flex-row">
+                <h4 class="text-gray">
+                    Copyright ©2023 All rights reserved | Privacy-Policy | Terms of Services
+                    <a href="" target="_black"> <i class="fab fa-youtube"></i>
+                        Channel</a>
+                </h4>
+            </div>
+            <div class="move-up">
+                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+            </div>
+        </footer>
+   
+      
+   
+         <!-- -------------x------------- Footer --------------------x------------------- -->
+   
+       <!-- Jquery Library file -->
+       <script src="./js/Jquery3.4.1.min.js"></script>
+   
+       <!-- --------- Owl-Carousel js ------------------->
+       <script src="./js/owl.carousel.min.js"></script>
+   
+       <!-- ------------ AOS js Library  ------------------------- -->
+       <script src="./js/aos.js"></script>
+   
+       <!-- Custom Javascript file -->
+       <script src="./js/main.js"></script>
+ 
+</body>
+</html>

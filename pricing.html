@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Insight iitb</title>
+    
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="./css/all.css">
+    
+    
+        <!-- --------- Owl-Carousel ------------------->
+        <link rel="stylesheet" href="./css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    
+        <!-- ------------ AOS Library ------------------------- -->
+        <link rel="stylesheet" href="./css/aos.css">
+    
+        <!-- Custom Style   -->
+        <link rel="stylesheet" href="./css/Style.css">
+        <link rel="stylesheet" href="./css/pricing.css">
+        
+        <style type='text/css'>
+            iframe.goog-te-banner-frame{ display: none !important;}
+            </style>
+            
+            <style type='text/css'>
+            body {position: static !important; top:0px !important;}
+            </style>
+            
+            <style type='text/css'>
+            .goog-logo-link {display:none !important;} 
+            .goog-te-gadget{color: transparent !important;}
+        </style>
+        <style>
+       
+            /* Existing styles */
+          
+            .dropdown-menu {
+              /* Existing styles */
+              position: fixed;
+              z-index: 999; /* Set a high z-index value */
+              display: none; /* Initially hide the dropdown menu */
+              background-color: rgba(255, 255, 255, 0.9); /* Increase transparency */
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              border-radius: 5px;
+              padding: 10px 0;
+              text-align: center; /* Adjust the alignment as needed */
+              top: 72px; /* Adjust the distance from the navbar */
+              left: 700px; /* Adjust the left position */
+            }
+          
+            .nav-link.dropdown:hover > .dropdown-menu {
+              display: block; /* Show the dropdown menu on hover */
+            }
+          
+            .dropdown-menu li {
+              list-style: none;
+              text-align: center;
+              padding: 8px 20px;
+              transition: background-color 0.3s;
+            }
+          
+            .dropdown-menu li:hover {
+              background-color: #ffc305; /* Change background color on hover */
+              color: red; /* Change text color on hover */
+              cursor: pointer;
+            }
+            
+            /* Adjust the below code to suit your specific navbar height */
+           
+          </style>
+    
+         
+          
+          
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var dropdownToggle = document.querySelector(".nav-link.dropdown");
+              var dropdownMenu = document.querySelector(".dropdown-menu");
+              
+              dropdownToggle.addEventListener("mouseover", function() {
+                dropdownMenu.style.display = "block";
+              });
+              
+              dropdownToggle.addEventListener("mouseout", function() {
+                dropdownMenu.style.display = "none";
+              });
+            });
+          </script>
+          
+          
+          
+          
+          
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var navbarLinks = document.querySelectorAll(".navbar a");
+              for (var i = 0; i < navbarLinks.length; i++) {
+                navbarLinks[i].addEventListener("click", scrollToSection);
+              }
+        
+              function scrollToSection(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute("href").substring(1);
+                var targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            });
+          </script>
+    
+</head>
+
+
+<body>
+     <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+     <nav class="nav" >
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Upaaya</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="cards.html">About-Us</a>
+                    </li>
+                    <li class="nav-link dropdown">
+                        <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)" style="text-decoration: none; color: #333;">Pricing</a>
+                        <ul class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                          <li><a href="#site-mission" style="text-decoration: none; color: #333;">Pricing</a></li>
+                          <li><a href="#Feature" style="text-decoration: none; color: #333;">Compare Features</a></li>
+                          <li><a href="#FAQ" style="text-decoration: none; color: #333;">FAQs</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-link">
+                        <a href="whyy.html">Why</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Forms</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.facebook.com/insight.iitbombay/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/insight.iitb/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/insightiitb?lang=en"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCOrygxhb6povqsNt_EVbDzg"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <style>
+        .translated-nav {
+            margin-top: 200px; /* Adjust the value as per your requirement */
+        }
+    </style>
+    
+    <script>
+        function translatePage() {
+            // Get the navbar element
+            var navbar = document.getElementById("navbar");
+    
+            // Add the 'translated-nav' class to push it down
+            navbar.classList.add("translated-nav");
+        }
+    </script>
+
+    <script>
+        function toggleDropdown(event) {
+          event.preventDefault();
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+        }
+      
+        window.addEventListener("click", function(event) {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          var dropdownToggle = document.querySelector(".dropdown-toggle");
+          if (!event.target.matches(".dropdown-toggle") && !event.target.matches(".dropdown-menu")) {
+            dropdownMenu.style.display = "none";
+          }
+        });
+      </script>
+
+      <style>
+        #google_translate_element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index:999;
+        }
+    </style>
+
+    <div id="google_translate_element" style="background-color: #ffc305; padding:10px 10px; border-radius:1rem;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+
+         function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,bn,te,mr,ta,ur,gu,kn,ml,pa,as,or,ks,ne,sd,si,en,es,fr,de,ja,ko,zh-CN',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
+
+    // Event listener to detect translation
+    google.translate.TranslateElement.setOnTranslateCallback(translatePage);
+}
+
+
+    </script>
+
+    <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+
+
+
+
+
+<br><br>
+<section class="plans">
+    <section class="price">
+    <div style="text-align: center;">
+        <h1>Pricing</h1>
+    </div>
+    <div style="text-align: center;">
+        <h3>Our Pricing is not expensive but its not<br> cheap either, its exactly what it should be</h3>
+    </div>
+   <br><br><br><br>
+   <div style="display: flex; justify-content: center;">
+    <div style="width: 20%; height: 340px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; background-color: #ffffff; margin: 0 10px; box-sizing: border-box; transition: transform 0.3s ease; justify-content: center; text-align: center;">
+        <h2>Basic</h2>
+        <h1 style="display: inline;">Rs 1500</h1><p style="display: inline;">/per session</p><br><br><br>
+        <p>For individuals and small teams or groups.</p><br>
+        <a href="#" style="display: inline-block; background-color: transparent; color: #ffc305; padding: 12px 30px; border: 2px solid #ffc305; border-radius: 5px; text-decoration: none; justify-content:center"
+            onmouseover="this.style.backgroundColor='#ffc305'; this.style.color='#223dc2';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffc305';">
+            Get Started with Basic
+        </a>
+    </div>
+    <div style="width: 20%; height: 340px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; background-color: #ffffff; margin: 0 10px; box-sizing: border-box; transition: transform 0.3s ease; text-align: center;">
+        <h2>Premium</h2>
+        <h1 style="display: inline;">Rs 1500</h1><p style="display: inline;">/per session</p><br><br><br>
+        <p>For Start-Ups and growing Businesses.</p><br>
+        <a href="#" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 30px; border-radius: 5px; text-decoration: none;"
+           onmouseover="this.style.backgroundColor='#223dc2'"
+           onmouseout="this.style.backgroundColor='#ffc305'">
+           Get Started with Pro
+        </a>
+    </div>
+    <div style="width: 20%; height: 340px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; background-color: #ffffff; margin: 0 10px; box-sizing: border-box; transition: transform 0.3s ease; text-align: center;">
+        <h2>Exclusive</h2>
+        <h1 style="display: inline;">Rs 1500</h1><p style="display: inline;">/per session</p><br><br><br>
+        <p>For organizations with advanced needs.</p><br>
+        <a href="#" style="display: inline-block; background-color: transparent; color: #ffc305; padding: 12px 30px; border: 2px solid #ffc305; border-radius: 5px; text-decoration: none;"
+            onmouseover="this.style.backgroundColor='#ffc305'; this.style.color='#223dc2';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffc305';">
+            Get Started with Business
+        </a>
+    </div>
+</div>
+    
+    <!-- <style>
+        div:hover {
+            transform: scale(1.08);
+        }
+    </style> -->
+</section>
+    <br><br><br><br><br>
+
+
+    <br> 
+
+<div id="Feature">
+    <section style="margin-left: 20px;">
+        <h1 style="color: #141212; text-align: center;">Compare Features</h1><br>
+        
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0); padding: 20px; margin-left: auto; margin-right: auto;">
+        <div style="flex: 30%; padding-left:200px;"><br>
+            <h2 style="color: #141212;">Basic</h2>
+            <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+           
+        </div>
+
+        <div style="flex: 10%;"><br>
+            <h2 style="color: #141212;">Premium</h2>
+            <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+            
+        </div>
+        <div style="flex: 20%; padding-right:20px"><br>
+            <h2 style="color: #141212;">Exclusive</h2>
+            <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div><div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <span class="fas fa-check-circle fa-2x" style="margin-right: 10px; color: #ffc305;"></span>
+                <p style="margin-bottom: 0;">Feature Name</p><br><br>
+              </div>
+              
+        </div>
+       
+       
+    </div>
+
+</section>
+</div>
+
+
+<section>
+    <div id="FAQ" style="display: flex; justify-content: center; align-items: center; height: 75vh; margin-bottom: -40px;">
+        <img src="assets/img2.png" alt="Image 1" style="width: 30%; height: 30%; max-height: 300px; object-fit: cover; border-radius: 5px;">
+        <p style="text-align: center; font-size:50px">Frequently Asked<br> Questions</p>
+    </div>
+    <div class="grid-container" style="margin-top: -90px;">
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title" style="text-align:center; margin-left:7px; margin-right: 17px;">Why learn data and digitisation in healthcare ?</p>
+                </div>
+                <div class="backSide">
+                    <p>Data and digitization improve healthcare accessibility, connecting providers and patients seamlessly for efficient delivery and knowledge democratization.</p>
+                </div>
+            </div>
+        </div>
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title" style="text-align:center; margin-left:7px; margin-right: 17px;">Why is mental health important?</p>
+                </div>
+                <div class="backSide">
+                    <p>"Mental health encompasses our emotional, psychological, and social well-being, influencing how we think, feel, act, and navigate life's challenges and relationships."</p>
+                </div>
+            </div>
+        </div>
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title" style="text-align:center; margin-left:7px; margin-right: 17px;">Why are good habits important?</p>
+                </div>
+                <div class="backSide">
+                    <p>"Mental health encompasses our emotional, psychological, and social well-being, influencing how we think, feel, act, and navigate life's challenges and relationships."</p>
+                </div>
+            </div>
+        </div>
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title" style="text-align:center; margin-left:7px; margin-right: 17px;">How does the AI enabled Symptom Checker for self assessment work?</p>
+                </div>
+                <div class="backSide">
+                    <p>"Mental health encompasses our emotional, psychological, and social well-being, influencing how we think, feel, act, and navigate life's challenges and relationships."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      
+      .myCard {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .myCard:hover {
+        transform: scale(1.08);
+      }
+      
+      .innerCard {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+      }
+      
+      .frontSide,
+      .backSide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      .frontSide {
+        background-color: #ffc305;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        opacity: 1;
+      }
+      
+      .backSide {
+        background-color: #ffffff;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+      }
+      
+</style>
+
+
+<br><br><br><br>
+
+
+
+
+     <!-- --------------------------- Footer ---------------------------------------- -->
+     <hr style="width: 1400px; border: none; height: 3px; background-color: #b2b1b1;">
+     <footer class="footer">
+         <div class="container">
+             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                 <h2>Upaaya</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                     iure, autem nulla tenetur repellendus.</p>
+             </div>
+             <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                 <h2>Newsletter</h2>
+                 <p>Stay update with our latest</p>
+                 <div class="form-element">
+                     <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                 </div>
+             </div>
+             <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                 <h2>Blogs</h2>
+                 <h4 style="color:#141212">Home</h4>
+                 <h4>About-Us</h4>
+                 <h4>Pricing</h4>
+                 <h4>Contact-Us</h4>
+                 <!-- <div class="flex-row">
+                     <img src="./assets/instagram/thumb-card3.png" alt="insta1">
+                     <img src="./assets/instagram/thumb-card4.png" alt="insta2">
+                     <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                 </div>
+                 <div class="flex-row">
+                     <img src="./assets/instagram/thumb-card6.png" alt="insta4">
+                     <img src="./assets/instagram/thumb-card7.png" alt="insta5">
+                     <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                 </div> -->
+             </div>
+             <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                 <h2>Follow us</h2>
+                 <p>Let us be Social</p>
+                 <div>
+                     <i class="fab fa-facebook-f"></i>
+                     <i class="fab fa-twitter"></i>
+                     <i class="fab fa-instagram"></i>
+                     <i class="fab fa-youtube"></i>
+                 </div>
+             </div>
+         </div>
+         <div class="rights flex-row">
+             <h4 class="text-gray">
+                 Copyright ©2023 All rights reserved | Privacy-Policy | Terms of Services
+                 <a href="" target="_black"> <i class="fab fa-youtube"></i>
+                     Channel</a>
+             </h4>
+         </div>
+         <div class="move-up">
+             <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+         </div>
+     </footer>
+
+   
+
+      <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="./js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="./js/aos.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+

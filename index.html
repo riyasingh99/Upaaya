@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upayaa</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+    
+
+
+    <style>
+        button {
+            --width: 150px;
+            --timing: 2s;
+            border: 0;
+            width: var(--width);
+            padding-block: 1em;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            background: rgb(64, 192, 87);
+            transition: all 0.2s;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+            animation: var(--timing) linear dance6123 infinite;
+            transform: scale(1.1) translateY(-1px);
+        }
+
+        @keyframes dance6123 {
+            to {
+                background-position: var(--width);
+            }
+        }
+    </style>
+    <style>
+        .container1 {
+            position: fixed;
+            top: 2%;
+            right: 60;
+            transform: translate(50%, -50%);
+            width: 400px;
+            height: 280px;
+        }
+        .background-image {
+            background-image: url('path/to/your/image.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255,0.9); /* Transparent background color */
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 2rem 2rem;
+        }
+    </style>
+
+    <style type='text/css'>
+        iframe.goog-te-banner-frame{ display: none !important;}
+        </style>
+        
+        <style type='text/css'>
+        body {position: static !important; top:0px !important;}
+        </style>
+        
+        <style type='text/css'>
+        .goog-logo-link {display:none !important;} 
+        .goog-te-gadget{color: transparent !important;}
+        </style>
+    <style>
+       
+        /* Existing styles */
+      
+        .dropdown-menu {
+          /* Existing styles */
+          position: fixed;
+          z-index: 999; /* Set a high z-index value */
+          display: none; /* Initially hide the dropdown menu */
+          background-color: rgba(255, 255, 255, 0.8); /* Increase transparency */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          border-radius: 5px;
+          padding: 10px 0;
+          text-align: center; /* Adjust the alignment as needed */
+          top: 72px; /* Adjust the distance from the navbar */
+          left: 485px; /* Adjust the left position */
+        }
+      
+        .nav-link.dropdown:hover > .dropdown-menu {
+          display: block; /* Show the dropdown menu on hover */
+        }
+      
+        .dropdown-menu li {
+          list-style: none;
+          text-align: center;
+          padding: 8px 20px;
+          transition: background-color 0.3s;
+        }
+      
+        .dropdown-menu li:hover {
+          background-color: #ffc305; /* Change background color on hover */
+          color: red; /* Change text color on hover */
+          cursor: pointer;
+        }
+        
+        /* Adjust the below code to suit your specific navbar height */
+       
+      </style>
+
+     
+      
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var dropdownToggle = document.querySelector(".nav-link.dropdown");
+          var dropdownMenu = document.querySelector(".dropdown-menu");
+          
+          dropdownToggle.addEventListener("mouseover", function() {
+            dropdownMenu.style.display = "block";
+          });
+          
+          dropdownToggle.addEventListener("mouseout", function() {
+            dropdownMenu.style.display = "none";
+          });
+        });
+      </script>
+      
+      
+      
+      
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var navbarLinks = document.querySelectorAll(".navbar a");
+          for (var i = 0; i < navbarLinks.length; i++) {
+            navbarLinks[i].addEventListener("click", scrollToSection);
+          }
+    
+          function scrollToSection(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      </script>
+      
+      
+</head>
+
+<body>
+
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav" >
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Upaaya</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link dropdown">
+                        <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)" style="text-decoration: none; color: #333;">Home</a>
+                        <ul class="dropdown-menu" id="dropdownMenu" style="display: none;">
+                          <li><a href="#site-mission" style="text-decoration: none; color: #333;">Our Mission</a></li>
+                          <li><a href="#OurStory" style="text-decoration: none; color: #333;">Our Story</a></li>
+                          <li><a href="#about" style="text-decoration: none; color: #333;">About Us</a></li>
+                          <li><a href="#review" style="text-decoration: none; color: #333;">Reviews</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-link">
+                        <a href="cards.html">About-Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="whyy.html">Why</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login/signup">
+                <a href="#" style="display: inline-block; background-color: transparent; color: #ffc305; padding: 12px 30px; border: 2px solid #ffc305; border-radius: 30px; text-decoration: none; margin-top: 12px;"
+                    onmouseover="this.style.backgroundColor='#ffc305'; this.style.color='#223dc2';"
+                    onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffc305';">
+                    Login
+                </a>
+            
+                <a href="#" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; margin-left: 10px; margin-top: 12px;"
+                    onmouseover="this.style.backgroundColor='#223dc2'"
+                    onmouseout="this.style.backgroundColor='#ffc305'">
+                    Sign Up
+                </a>
+            </div>
+            
+    </nav>
+    <style>
+        .translated-nav {
+            margin-top: 200px; /* Adjust the value as per your requirement */
+        }
+    </style>
+    
+    <script>
+        function translatePage() {
+            // Get the navbar element
+            var navbar = document.getElementById("navbar");
+    
+            // Add the 'translated-nav' class to push it down
+            navbar.classList.add("translated-nav");
+        }
+    </script>
+
+    <script>
+        function toggleDropdown(event) {
+          event.preventDefault();
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+        }
+      
+        window.addEventListener("click", function(event) {
+          var dropdownMenu = document.getElementById("dropdownMenu");
+          var dropdownToggle = document.querySelector(".dropdown-toggle");
+          if (!event.target.matches(".dropdown-toggle") && !event.target.matches(".dropdown-menu")) {
+            dropdownMenu.style.display = "none";
+          }
+        });
+      </script>
+
+      <style>
+        #google_translate_element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index:999;
+        }
+    </style>
+
+    <div id="google_translate_element" style="background-color: #ffc305; padding:10px 10px; border-radius:1rem;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
+
+         function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,bn,te,mr,ta,ur,gu,kn,ml,pa,as,or,ks,ne,sd,si,en,es,fr,de,ja,ko,zh-CN',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
+
+    // Event listener to detect translation
+    google.translate.TranslateElement.setOnTranslateCallback(translatePage);
+}
+
+
+    </script>
+
+    <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+<br><br><br><br>
+<section id="sld">
+    <div id="CrossFade" style="background: #ffffff; display: flex; align-items: center; justify-content: center; height: 120vh; overflow: hidden; position: relative;">
+        <img src="assets/IMAGE44.jpeg" alt="img" style="position: absolute; min-width: 100%; min-height: 100%; height: auto; background: #000; -webkit-backface-visibility: hidden; backface-visibility: hidden; opacity: 0; transform: scale(1.4) rotate(12deg); -webkit-animation: CrossFade 24s infinite; animation: CrossFade 24s infinite;">
+        <img src="assets/IMAGE3.jpeg" alt="img" style="position: absolute; min-width: 100%; min-height: 100%; height: auto; background: #000; -webkit-backface-visibility: hidden; backface-visibility: hidden; opacity: 0; transform: scale(1.4) rotate(12deg); -webkit-animation: CrossFade 24s infinite; animation: CrossFade 4s infinite; -webkit-animation-delay: 18s; animation-delay: 18s;">
+        <img src="assets/IMAGE2.jpeg" alt="img" style="position: absolute; min-width: 100%; min-height: 100%; height: auto; background: #000; -webkit-backface-visibility: hidden; backface-visibility: hidden; opacity: 0; transform: scale(1.4) rotate(12deg); -webkit-animation: CrossFade 24s infinite; animation: CrossFade 24s infinite; -webkit-animation-delay: 12s; animation-delay: 12s;">
+        <img src="assets/IMAGE5.jpeg" alt="img" style="position: absolute; min-width: 100%; min-height: 100%; height: auto; background: #000; -webkit-backface-visibility: hidden; backface-visibility: hidden; opacity: 0; transform: scale(1.4) rotate(12deg); -webkit-animation: CrossFade 24s infinite; animation: CrossFade 24s infinite; -webkit-animation-delay: 6s; animation-delay: 6s;">
+        <div class="container1" style="position: absolute; top: 2%; left: 75%; transform: translate(-50%, -50%); width: 400px; height: 280px;">
+            <div class="background-image"></div>
+            <div class="content" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 2rem;">
+                <h1 style="color: #ffc305;">"Your AI Health Companion"</h1><br>
+                <p>"Empower yourself with our AI-powered symptom tracker for comprehensive health monitoring."</p><br>
+                <a href="https://test.knidian.app/" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none;"
+                    onmouseover="this.style.backgroundColor='#223dc2'"
+                    onmouseout="this.style.backgroundColor='#ffc305'">
+                    Get Started
+                </a>
+                <br><br>
+            </div><br>
+        </div><br>
+    </div><br>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        @-webkit-keyframes CrossFade {
+            25% {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+            40% {
+                opacity: 0;
+            }
+        }
+        @keyframes CrossFade {
+            25% {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+            40% {
+                opacity: 0;
+            }
+        }
+    </style>
+</section>
+
+
+
+
+
+
+
+  
+
+
+  <br>
+        <br><br>
+        <section class="site-mission">
+            
+            <div id="site-mission">
+                <br><br><br><br>
+            <h1 style="color: #000000">Our Mission</h2>
+            <h3 style="color: rgb(57, 51, 51);">Empowering Individuals to Take Control of Their Health</h3>
+            <p style="text-align: center; margin-left: auto; margin-right: auto; max-width: 1200px;">
+                At Upayaa, our mission is to revolutionize the healthcare industry by harnessing the power of technology. At the heart of our mission is the belief that individuals should have the tools and knowledge to take control of their own health. We aim to empower people with accessible and user-friendly health tech solutions that enable them to make informed decisions, monitor their well-being, and actively participate in their healthcare journey.
+                </p>   
+            <br>
+            <br>
+            <button class="btn" style="display: block; margin: 0 auto; padding: 12px 16px; border: radius 10px;">Blog</button>
+        </div>
+
+        </section>
+       
+
+        <!------------x----------- Site Title ----------x----------->
+
+        
+
+        <!-- ---------------------- Site Content -------------------------->
+        <br><br><br><br>
+       
+
+
+
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 20px;">
+            <div style="flex: 40%; padding-right: 20px;">
+                <img src="assets/IMAGE2.jpeg" alt="Image 1" style="width: 110%; height: 100%; max-height: 700px; object-fit: cover; border-radius: 0px;">
+            </div>
+            <div style="flex: 10%;"> </div>
+            <div style="flex: 50%;">
+                <h2>Better Brain, Mental health and Behavioural health through technology and training</h2>
+                <h3>"Reimagining Mental Wellness with Technology"</h3>
+                <p>At Upayaa, we are passionate about enhancing brain health, mental well-being, and behavioral health through the power of technology and training. We believe that every individual deserves access to effective solutions that promote optimal brain function and foster positive mental health.<br>
+                    <br>
+                    By leveraging the latest advancements in neuroscience and behavioral science, we aim to revolutionize the way we understand, diagnose, and treat brain-related conditions. Together, let's embark on a journey towards better brain health and a happier, more fulfilling life.</p><br>
+                <div>
+                    <a href="https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Try it today
+                    </a>
+                    <br>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+        <div id="OurStory" style="display: flex; margin:auto;  max-width: 1100px; border-radius: 5px; background-color: #ffffff;  padding: 20px;">
+            
+            <div style="flex: 60%;">
+                <h1>Our Story...</h1>
+                <h3></h3>
+                <p>Achieving good physical and mental health is Multi-sectoral and involves social determinants of health like poverty , housing , finance along with a clinical definition. Mental or physical health does not only lie in the hands of a doctor or a hospital but also in the systems where a person lives or works. Example a good work culture prevents disease/hazards  by inculcating good physical and mental habits , safety measures. Every business or system will be a embedded with a health well being function or digital push as a result of the pandemic. 
+                    <br><br>
+                    UpayaaHealth starts from a personal itch of seeing family members going through chronic diseases physical and mental, falling through the cracks in the healthcare system and finding no sustainable solutions which could support their condition which lasted their lifetimes. It led to despair, anguish , decrease in quality of life and financial problems. 
+                </p><br>
+                <div>
+                    <a href="#" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Know us better
+                    </a>
+                </div>
+                
+            </div>
+            <div style="flex: 10%;"> </div>
+            <div style="flex: 50%; padding-left: 20px;">
+                <img src="assets/IMAGE1.jpeg" alt="Image 1" style="width: 100%; height:100%; max-height: 700px; object-fit: cover; border-radius: 0px;">
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+<div id="about">
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff;  padding: 20px;">
+            <div style="flex: 40%; padding-right: 20px;">
+                <img src="assets/IMAGE5.jpeg" alt="Image 1" style="width: 100%; height:100%; max-height: 700px; object-fit: cover; border-radius: 0px;">
+            </div>
+            <div style="flex: 10%;"> </div>
+            <div style="flex: 50%;">
+                <h1>About Us</h1>
+                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque fuga, molestiae repudiandae rem a iste accusamus dignissimos vero totam magnam inventore dolor tempore eligendi? Repellendus aperiam amet iure, ea aliquam eligendi alias eos asperiores natus, enim distinctio quia? Ipsa commodi rem, doloribus, tempora, voluptates aperiam ex cupiditate facilis cumque<br>
+                    <br>
+                 vel neque nulla unde temporibus pariatur mollitia sit. Molestiae voluptatum beatae tempora sint aspernatur dolore velit illo amet veritatis cum alias ipsam officia, nulla soluta inventore quod vitae animi optio autem reprehenderit non officiis. Nulla, quasi debitis! Est rem, aspernatur voluptatibus quidem quaerat sint totam non id impedit quasi vero atque.</p><br>
+                 <div>
+                    <a href="#" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Try it today
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br> <br> <br><br> <br> <br><br>
+    </div>
+
+
+        <section style="margin-left: 20px;">
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 20px;">
+            <div style="flex: 40%;">
+                <img src="assets/Screenshot (771).png" alt="Image 1" style="width: 100%; height:80%; max-height: 400px; object-fit: cover; border-radius: 5px;">
+                <h1>Product Benefits</h1>
+                
+                <p>Lorem ipsum, dolor sit Lorem ipsum dolor siLorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda laudantium officia perspiciatis cumque  Iusto cum<br> porro libero ad ipsum iste officiis est quae consectetur incidunt? Exercitationem, officia? Adipisci repellat, nam dicta esse architecto tempora,       </p>
+                
+                <div>
+                    <a href="https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                        Sign Up Now
+                    </a>
+                </div>
+            </div>
+
+            <div style="flex: 10%; padding-left: 20px;">
+                
+            </div>
+            <div style="flex: 30%; padding-left: 20px;">
+                <br><br>
+                <h2>Tech and Training</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor ipsum non dignissim pulvinar.</p><br>
+                <hr style="width: 380px; border: none; height: 3px; background-color: #ffc305;">
+                <br>
+                <h2>Track Parameters</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor ipsum non dignissim pulvinar.</p><br>
+                <hr style="width: 380px; border: none; height: 3px; background-color: #ffc305;">
+                <br>
+                <h2>Better Habits</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor ipsum non dignissim pulvinar.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <br><br><br><br><br><br><br><br><br><br>
+
+
+
+        <section class="Review">
+            <div id="review">
+            <div style="display: flex; justify-content: center;">
+                <h1 style="text-align: center;">Happy Customers!</h1>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <h3 style="text-align: center;">People love what we do and want to let you know</h3>
+            </div>
+            <br><br>
+            
+            <div class="blog">
+                <div class="container">
+                    <!-- <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/Untitled design.png">
+                            <div class="blog-title">
+                                <h3>Aphiar Livious</h3>
+                                <p>This product is so cool and useful</p>
+                                <div class="rating" style="display: flex; justify-content:center; ">
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305;"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305;"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305;"></span>
+                                </div>
+                                <a href="https://www.strategy-business.com/article/Building-for-the-future" class="btn-wrapper">
+                                    <button class="btn btn-blog">Read More</button>
+                                </a>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                            <img src="./assets/Blog-post/Untitled design.png">
+                            <div class="blog-title">
+                                <h3>Aphiar Livious</h3>
+                                <p>This product is so cool and useful</p>
+                                <div class="rating" style="display: flex; justify-content:center; ">
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                </div>
+                                <a href="https://www.ycombinator.com/blog/how-to-start-a-biotech-company-on-a-budget/" class="btn-wrapper">
+                                <button class="btn btn-blog">Read More</button>
+                                </a>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./assets/Blog-post/Untitled design.png">
+                            <div class="blog-title">
+                                <h3>Aphiar Livious
+                                </h3>
+                                <p>This product is so cool and useful</p>
+                                <div class="rating" style="display: flex; justify-content:center; ">
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                </div>
+                                <a href="https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d" class="btn-wrapper">
+                                <button class="btn btn-blog">Read More</button>
+                                </a>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="./assets/Blog-post/Untitled design.png" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Aphiar Livious
+                                </h3>
+                                <p>This product is so cool and useful</p>
+                                <div class="rating" style="display: flex; justify-content:center; ">
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                    <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                </div>
+                                <a href="https://garyvaynerchuk.com/reframing-the-narrative-on-entrepreneurship/" class="btn-wrapper">
+                                <button class="btn btn-blog">Read More</button>
+                                </a>
+                                <span>2 minutes</span>
+                            </div>
+                        </div>
+                    
+                    </div> -->
+                    <div style="display: flex; justify-content: center;">
+                        <div style="flex: 0 0 20%; background-color: #ffffff; padding: 20px; box-sizing: border-box; margin-right: 70px;">
+                            <h2 style="text-align: center;">This product is so cool and useful and creates so much value</h2>
+                            <div class="rating" style="display: flex; justify-content:center; ">
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                            </div>
+                            <h2 style="text-align: center;">Aphiar Livious</h2>
+                            <p style="text-align: center;">Lead Wizard at Hogwarts</p>
+                        </div>
+                        <div style="flex: 0 0 20%; background-color: #ffffff; padding: 20px; box-sizing: border-box; margin-right: 70px;">
+                            <h2 style="text-align: center;">This product is so cool and useful and creates so much value</h2>
+                            <div class="rating" style="display: flex; justify-content:center; ">
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                            </div>
+                            <h2 style="text-align: center;">Aphiar Livious</h2>
+                            <p style="text-align: center;">Lead Wizard at Hogwarts</p>
+                        </div>
+                        <div style="flex: 0 0 20%; background-color: #ffffff; padding: 20px; box-sizing: border-box;">
+                            <h2 style="text-align: center;">This product is so cool and useful and creates so much value</h2>
+                            <div class="rating" style="display: flex; justify-content:center; ">
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                                <span class="fas fa-star" style="margin-right: 5px; color: #ffc305"></span>
+                            </div>
+                            <h2 style="text-align: center;">Aphiar Livious</h2>
+                            <p style="text-align: center;">Lead Wizard at Hogwarts</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+        
+
+        <br> <br> <br><br> <br>
+
+        <div style="display: flex; margin: 0 auto; max-width: 1100px; border-radius: 5px; background-color: #ffffff; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); padding: 20px;">
+            <div style="flex: 60%;">
+                <h1>Get Started Today</h1>
+                <h3>Click To Know Our Pricing Plan Today
+                </h3>
+                <p>Lorem ipsum, dolor sit Lorem ipsum dolor sit amet.
+                    <br> <br> <br>  
+                </p>
+                <div>
+                    <a href="https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d" style="display: inline-block; background-color: #ffc305; color: #fff; padding: 12px 16px; border-radius: 10px; text-decoration: none;"
+                        onmouseover="this.style.backgroundColor='#223dc2'"
+                        onmouseout="this.style.backgroundColor='#ffc305'">
+                     Sign Up Now
+                    </a>
+                </div>
+            </div>
+            <div style="flex: 40%; padding-left: 20px;">
+                <img src="assets/IMAGE3.jpeg" alt="Image 1" style="width: 100%; height:100%; max-height: 400px; object-fit: cover; border-radius: 5px;">
+            </div>
+        </div>
+         <br> <br> <br><br> <br> <br><br> <br> <br><br> <br> <br>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+
+
+      <!-- --------------------------- Footer ---------------------------------------- -->
+      <hr style="width: 1520px; border: none; height: 3px; background-color: #b2b1b1; justify-content:center;">
+      <footer class="footer">
+          <div class="container">
+              <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                  <h2>Upaaya</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                      iure, autem nulla tenetur repellendus.</p>
+              </div>
+              <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                  <h2>Newsletter</h2>
+                  <p>Stay update with our latest</p>
+                  <div class="form-element">
+                      <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                  </div>
+              </div>
+              <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                  <h2>Blogs</h2>
+                  <h4 style="color:#141212">Home</h4>
+                  <h4>About-Us</h4>
+                  <h4>Pricing</h4>
+                  <h4>Contact-Us</h4>
+                  <!-- <div class="flex-row">
+                      <img src="./assets/instagram/thumb-card3.png" alt="insta1">
+                      <img src="./assets/instagram/thumb-card4.png" alt="insta2">
+                      <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                  </div>
+                  <div class="flex-row">
+                      <img src="./assets/instagram/thumb-card6.png" alt="insta4">
+                      <img src="./assets/instagram/thumb-card7.png" alt="insta5">
+                      <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                  </div> -->
+              </div>
+              <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                  <h2>Follow us</h2>
+                  <p>Let us be Social</p>
+                  <div>
+                      <i class="fab fa-facebook-f"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-youtube"></i>
+                  </div>
+              </div>
+          </div>
+          <div class="rights flex-row">
+              <h4 class="text-gray">
+                  Copyright ©2023 All rights reserved | Privacy-Policy | Terms of Services
+                  <a href="" target="_black"> <i class="fab fa-youtube"></i>
+                      Channel</a>
+              </h4>
+          </div>
+          <div class="move-up">
+              <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+          </div>
+      </footer>
+ <br>
+    
+ 
+       <!-- -------------x------------- Footer --------------------x------------------- -->
+ 
+     <!-- Jquery Library file -->
+     <script src="./js/Jquery3.4.1.min.js"></script>
+ 
+     <!-- --------- Owl-Carousel js ------------------->
+     <script src="./js/owl.carousel.min.js"></script>
+ 
+     <!-- ------------ AOS js Library  ------------------------- -->
+     <script src="./js/aos.js"></script>
+ 
+     <!-- Custom Javascript file -->
+     <script src="./js/main.js"></script>
+
+     
+</body>
+
+</html>
